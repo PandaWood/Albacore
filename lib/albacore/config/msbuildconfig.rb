@@ -22,7 +22,8 @@ module Configuration
     end
 
     def use(netversion)
-      self.command = File.join(get_net_version(netversion), "MSBuild.exe")
+      # self.command = File.join(get_net_version(netversion), "MSBuild.exe")
+      self.command = "MSBuild.exe"    # above ends up using wrong version, so we'll fall back to relying on the correct one being in the path, for now
     end
   end
 end

@@ -22,7 +22,8 @@ module Configuration
     end
 
     def use(netversion)
-      self.command = File.join(get_net_version(netversion), "csc.exe")
+      # self.command = File.join(get_net_version(netversion), "csc.exe")
+      self.command = "csc.exe"
     end
   end
 end
